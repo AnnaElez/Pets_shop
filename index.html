@@ -41,8 +41,12 @@
                     <nav class="icon_menu">
                         <a href="#"><i class="fas fa-search"></i> </a>
                         <a href="#"><i class="fas fa-shopping-cart"></i> </a>
-                        <button><i class="fas fa-bars"></i></button>
+                        <button id="menu_btn"><i class="fas fa-bars"></i></button>
                     </nav>
+
+                    <div class="burger_menu" id="burger_menu">
+
+                    </div>
                 </div>
             </section>
         </section>
@@ -109,7 +113,8 @@
                             <div class="img_wrapper  horizontal_centered  flex rounded_obj20 big_img_wrapper">
                                 <img src="img/product4.png" alt="">
                                 <div class="overlay horizontal_centered vertically_centered  flex ">
-                                    <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">View Details</a>
+                                    <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">View
+                                        Details</a>
                                 </div>
                             </div>
 
@@ -121,12 +126,13 @@
                             <div class="img_wrapper  horizontal_centered  flex rounded_obj20 big_img_wrapper">
                                 <img src="img/1product.png" alt="">
                                 <div class="overlay horizontal_centered vertically_centered  flex ">
-                                    <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">View Details</a>
+                                    <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">View
+                                        Details</a>
                                 </div>
                             </div>
 
                             <div class="product_description text_center">
-                                <h3 class="product_title">Mauris blandit aliquet</h3>                                
+                                <h3 class="product_title">Mauris blandit aliquet</h3>
                             </div>
                         </div>
                     </div>
@@ -136,7 +142,8 @@
                             <div class="img_wrapper horizontal_centered  flex rounded_obj20 little_img_wrapper">
                                 <img src="img/product3.png" alt="">
                                 <div class="overlay horizontal_centered vertically_centered  flex ">
-                                    <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">View Details</a>
+                                    <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">View
+                                        Details</a>
                                 </div>
                             </div>
                             <div class="product_description text_center">
@@ -148,7 +155,8 @@
                             <div class="img_wrapper  horizontal_centered  flex rounded_obj20 little_img_wrapper">
                                 <img src="img/product2.png" alt="">
                                 <div class="overlay horizontal_centered vertically_centered  flex ">
-                                    <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">View Details</a>
+                                    <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">View
+                                        Details</a>
                                 </div>
                             </div>
                             <div class="product_description text_center">
@@ -159,7 +167,8 @@
                             <div class="img_wrapper  horizontal_centered  flex rounded_obj20 little_img_wrapper">
                                 <img src="img/product5.png" alt="">
                                 <div class="overlay horizontal_centered vertically_centered  flex ">
-                                    <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">View Details</a>
+                                    <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">View
+                                        Details</a>
                                 </div>
                             </div>
                             <div class="product_description text_center">
@@ -246,25 +255,29 @@
                         <div class="red_background rounded_obj10">
                             <img src="img/osh1.png" alt="">
                             <div class="overlay horizontal_centered vertically_centered  flex ">
-                                <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">Buy Now</a>
+                                <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">Buy
+                                    Now</a>
                             </div>
                         </div>
                         <div class="blue_background rounded_obj10">
                             <img src="img/osh2.png" alt="">
                             <div class="overlay horizontal_centered vertically_centered  flex ">
-                                <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">Buy Now</a>
+                                <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">Buy
+                                    Now</a>
                             </div>
                         </div>
                         <div class="purple_background rounded_obj10">
                             <img src="img/osh3.png" alt="">
                             <div class="overlay horizontal_centered vertically_centered  flex ">
-                                <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">Buy Now</a>
+                                <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">Buy
+                                    Now</a>
                             </div>
                         </div>
                         <div class="grey_background rounded_obj10">
                             <img src="img/osh4.png" alt="">
                             <div class="overlay horizontal_centered vertically_centered  flex ">
-                                <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">Buy Now</a>
+                                <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">Buy
+                                    Now</a>
                             </div>
                         </div>
                     </div>
@@ -312,21 +325,74 @@
                             <i class="fas fa-quote-right quote fa-pull-right"></i>
                         </div>
                     </div>
-                    <div class="arrows_wrapper">
+                    <!-- <div class="arrows_wrapper">
                         <div class="arrows_for_review flex">
                             <i class="fas fa-long-arrow-alt-up fa-2x"></i>
                             <i class="fas fa-long-arrow-alt-down fa-2x"></i>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
+
+            <div class="review_form">
+                <form id="my_form" class="form">
+                    <label for="fname">Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..." required>
+
+                    <label for="lname">Surname</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
+
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Your age...">
+
+                    <label for="gender">Gender</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="age">Your opinion about our product</label>
+                    <textarea id="textarea" placeholder="Your review..."></textarea>
+
+                    <button id="btn" class="submit" type="submit"> Submit review</button>
+                </form>
+
+
+
+            </div>
+
+            <div id="review_done" class="review_block flex">
+                <div>
+                    <i class="fas fa-quote-left quote fa-pull-left"></i>
+                </div>
+                <div class="avatar">
+                    <img src="img/avatar.png" alt="">
+                </div>
+                <p id="review_text" class="text_center opacity "></p>
+
+                <h3 id="account_name" class="account_name text_center"></h3> 
+                <h4 id="account_age" class="text_center opacity prof"></h4> 
+                <h4 id="account_gender" class="text_center opacity prof"></h4>
+                <div>
+                    <i class="fas fa-quote-right quote fa-pull-right"></i>
+                </div>
+            </div>
+
+
+
+
             <div class="send_message_wrapper rounded_obj10 mb-8">
+
+
+
 
                 <div class="send_message vertically_centered flex">
                     <div class="send_message_left_block">
                         <h2 class="text_white">Dogs leave paw prints forever.</h2>
-                        <p class="opacity text_white">A dog in heat needs more than shade The more people I meet the more I like my
+                        <p class="opacity text_white">A dog in heat needs more than shade The more people I meet the
+                            more I like my
                             dog.</p>
                     </div>
 
@@ -338,6 +404,7 @@
 
             </div>
         </section>
+
         <div class="triangle_footer"></div>
 
     </main>
@@ -384,7 +451,7 @@
 
 
 
-
+    <script src="script.js"></script>
 
 </body>
 
