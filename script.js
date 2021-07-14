@@ -16,7 +16,7 @@ const addReview = (ev) => {
 document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', addReview);
     btn.addEventListener('click', addReviewBlock);
-    menu_btn.addEventListener('click', openMenu);
+    // menu_btn.addEventListener('click', openMenu);
 });
 
 
@@ -39,7 +39,7 @@ const addReviewBlock = (ev) => {
     let gender;
     console.log(reviews);
     let textarea;
-    for (i = 0; i >= 0; i++) {
+    for (i = 0; i < reviews.length; i++) {
         first_name = reviews[i].first_name;
         last_name = reviews[i].last_name;
         age = reviews[i].age;
@@ -49,7 +49,6 @@ const addReviewBlock = (ev) => {
         console.log(first_name)
     }
     account_name.innerHTML = first_name + " " + last_name;
-    // console.log(account_name)
     account_age.innerHTML = age;
     account_gender.innerHTML = gender;
     review_text.innerHTML = textarea;
@@ -60,53 +59,17 @@ const addReviewBlock = (ev) => {
 }
 
 
+// let burger_menu = document.getElementById('burger_menu');
+// burger_menu.style.display = 'none';
 
-    // let first_name = reviews[0].first_name;
-    // let last_name = reviews[0].last_name;
-    // let age = reviews[0].age;
-    // let gender = reviews[0].gender;
-    // let textarea = reviews[0].textarea;
-    // account_name.innerHTML = first_name + " " + last_name;
-    // account_age.innerHTML = age;
-    // account_gender.innerHTML = gender;
-    // review_text.innerHTML = textarea;
-    // // console.log(account_name);
-    // let all_reviews = JSON.stringify(reviews);
-    // // console.log(all_reviews)
+// let menu_btn = document.getElementById('menu_btn');
 
-
-let burger_menu = document.getElementById('burger_menu');
-burger_menu.style.display = 'none';
-
-let menu_btn = document.getElementById('menu_btn');
-
-const openMenu = (ev) => {
-    burger_menu.style.display = 'flex';
-
-    // let first_name;
-    // let last_name;
-    // let age;
-    // let gender;
-    // console.log(reviews);
-    // let textarea;
-    // for (i = 0; i >= 0; i++) {
-    //     first_name = reviews[i].first_name;
-    //     last_name = reviews[i].last_name;
-    //     age = reviews[i].age;
-    //     console.log(age);
-    //     gender = reviews[i].gender;
-    //     textarea = reviews[i].textarea;
-    //     console.log(first_name)
-    // }
-    // account_name.innerHTML = first_name + " " + last_name;
-    // // console.log(account_name)
-    // account_age.innerHTML = age;
-    // account_gender.innerHTML = gender;
-    // review_text.innerHTML = textarea;
+// const openMenu = (ev) => {
+//     burger_menu.style.display = 'flex';
 
 
     
 
-}
+// }
 
 
