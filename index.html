@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/adaptive.css">
     <script src="https://kit.fontawesome.com/9262b09bd4.js" crossorigin="anonymous"></script>
     <title>Pet shop</title>
 </head>
@@ -22,7 +23,7 @@
                         <p class="uppercase_text bold_text">DOG</p>
                     </a>
                     <nav class="menu">
-                        <ul class="menu_list flex">
+                        <ul class="menu_list flex" id="adapt_none">
                             <li class="menu_list-item">
                                 <a href='index.html' target='_blank'>Products</a>
                             </li>
@@ -44,28 +45,49 @@
                         <button id="menu_btn"><i class="fas fa-bars"></i></button>
                     </nav>
 
-                    <!-- <div class="burger_menu" id="burger_menu">
 
-                    </div> -->
                 </div>
             </section>
+            <div class="burger_menu" id="burger_menu">
+                <nav class="menu_adapt">
+                    <button class="close_menu" id="close_menu"> 
+                        <i class="far fa-times-circle fa-spin fa-2x"></i>
+                    </button>
+                    <ul class="menu_list_hamb flex">
+                        <li class="menu_list-item_hamb">
+                            <a href='index.html' target='_blank'>Products</a>
+                        </li>
+                        <li class="menu_list-item_hamb">
+                            <a href='#' target='_blank'>Dog care</a>
+                        </li>
+                        <li class="menu_list-item_hamb">
+                            <a href='#' target='_blank'>About</a>
+                        </li>
+                        <li class="menu_list-item_hamb">
+                            <a href='#' target='_blank'>Popular</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </section>
+
     </header>
 
     <main>
         <section class="container">
-            <div class="site_welcome vertically_centered  flex">
+            <div class="site_welcome vertically_centered flex">
                 <div class="site_welcome_texts flex">
                     <h1 class="site_title extrabold_text ">Dog is my Copilot.</h1>
                     <div class="buttons flex">
-                        <a class="orange_button text_white rounded_obj20 text_capitalize" href="#">Buy Now</a>
-                        <a class="white_button rounded_obj20 text_capitalize text_orange" href="#">See details</a>
+                        <a class="orange_button text_white rounded_obj20 text_capitalize button" href="#">Buy Now</a>
+                        <a class="white_button rounded_obj20 text_capitalize text_orange button" href="#">See
+                            details</a>
                     </div>
 
                 </div>
-
-                <img src="img/dog_top.png" alt="">
-
+                <div class="dog_ph">
+                    <img src="img/dog_top.png" alt="">
+                </div>
             </div>
 
             <div class="cards_img horizontal_centered flex">
@@ -180,19 +202,23 @@
 
                 </div>
                 <div class="buttons horizontal_centered flex">
-                    <a href="#" class="white_button rounded_obj20 text_capitalize text_orange">View all products</a>
+                    <a href="#" class="white_button button rounded_obj20 text_capitalize text_orange">View all
+                        products</a>
                 </div>
             </div>
 
             <div class="img_and_info vertically_centered horizontal_centered flex mb-8">
-                <img src="img/doc.png" alt="doctor">
+                <div class="adopt_img">
+                    <img src="img/doc.png" alt="doctor">
+                </div>
                 <div class="adopt_info">
                     <h3 class="uppercase_text text_orange">Dog care</h3>
                     <h2 class="title_font">Start your adoption journey with us</h2>
                     <p>A dog in heat needs more than shade The more people I meet the more I like my dog.
                         The more people I meet the more I like my Dogs leave paw prints forever on our hearts.</p>
-                    <a class="orange_button text_white rounded_obj20 text_capitalize" href="#">Appointment Now</a>
-                    <a class="white_button rounded_obj20 text_capitalize text_orange" href="#">See details</a>
+                    <a class="orange_button button text_white rounded_obj20 text_capitalize" href="#">Appointment
+                        Now</a>
+                    <a class="white_button button rounded_obj20 text_capitalize text_orange" href="#">See details</a>
                 </div>
             </div>
 
@@ -201,9 +227,10 @@
             </div>
 
             <div class="object_line flex">
-                <div class="dog_card horizontal_centered ">
-                    <img src="img/dog1.png" alt="">
-
+                <div class="dog_card vertically_centered horizontal_centered flex">
+                    <div class="dog_card-img">
+                        <img src="img/dog1.png" alt="">
+                    </div>
                     <div class="dog_description text_center">
                         <h3 class="title_font">Dogs leave paw prints forever on our hearts</h3>
                         <p>Dogs never bite me. Just humans.Happiness is a warm puppy.
@@ -212,9 +239,10 @@
                     </div>
                 </div>
 
-                <div class="dog_card horizontal_centered ">
-                    <img src="img/dog2.png" alt="">
-
+                <div class="dog_card vertically_centered horizontal_centered flex">
+                    <div class="dog_card-img">
+                        <img src="img/dog2.png" alt="">
+                    </div>
                     <div class="dog_description text_center">
                         <h3 class="title_font">Dogs leave paw prints forever on our hearts</h3>
                         <p>Dogs never bite me. Just humans.Happiness is a warm puppy.
@@ -223,9 +251,10 @@
                     </div>
                 </div>
 
-                <div class="dog_card horizontal_centered ">
-                    <img src="img/dog3.png" alt="">
-
+                <div class="dog_card vertically_centered horizontal_centered flex">
+                    <div class="dog_card-img">
+                        <img src="img/dog3.png" alt="">
+                    </div>
                     <div class="dog_description text_center">
                         <h3 class="title_font">Dogs leave paw prints forever on our hearts</h3>
                         <p>Dogs never bite me. Just humans.Happiness is a warm puppy.
@@ -234,12 +263,12 @@
                     </div>
                 </div>
 
-                <div class="buttons mb-8 horizontal_centered flex">
-                    <a class="orange_button text_white rounded_obj20 text_capitalize" href="#">Subscribe</a>
-                </div>
+
             </div>
 
-
+            <div class="buttons mb-8 horizontal_centered flex">
+                <a class="orange_button button text_white rounded_obj20 text_capitalize" href="#">Subscribe</a>
+            </div>
 
 
 
@@ -282,7 +311,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="big_photo flex horizontal_centered  rounded_obj10">
+                <div class="big_photo flex horizontal_centered  rounded_obj10" id="product_none">
                     <img src="img/osh5.png" alt="">
                     <div class="overlay horizontal_centered vertically_centered  flex ">
                         <a href="#" class="details_btn horizontal_centered vertically_centered  flex ">Buy Now</a>
@@ -337,11 +366,11 @@
                     <input type="text" id="lname" name="lastname" placeholder="Your last name..." required>
 
                     <label for="age">Age</label>
-                    <input type="number" id="age" name="age" placeholder="Your age...">
+                    <input type="number" id="age" name="age" min="2" max="3" placeholder="Your age...">
 
                     <label for="gender">Gender</label>
                     <select id="gender" name="gender">
-                        <option value="male">Male</option>
+                        <option value="male" selected>Male</option>
                         <option value="female">Female</option>
                         <option value="other">Other</option>
                     </select>
@@ -365,8 +394,8 @@
                 </div>
                 <p id="review_text" class="text_center opacity "></p>
 
-                <h3 id="account_name" class="account_name text_center"></h3> 
-                <h4 id="account_age" class="text_center opacity prof"></h4> 
+                <h3 id="account_name" class="account_name text_center"></h3>
+                <h4 id="account_age" class="text_center opacity prof"></h4>
                 <h4 id="account_gender" class="text_center opacity prof"></h4>
                 <div>
                     <i class="fas fa-quote-right quote fa-pull-right"></i>
@@ -408,7 +437,7 @@
                 <div class="left_footer_menu flex">
                     <a href="#">Product & Policy</a>
                     <a href="#">Privacy & About</a>
-                    <a href="#">Contact: <span class="text_orange"> alaminhossen.75bd@gmail.com</span></a>
+                    <a href="#">Contact: <br><span class="text_orange"> alaminhossen.75bd@gmail.com</span></a>
                 </div>
 
                 <div class="contacts_footer_menu vertically_centered flex">

@@ -1,3 +1,4 @@
+// Using info from input form
 let reviews = [];
 let btn = document.getElementById('btn');
 const addReview = (ev) => {
@@ -16,7 +17,6 @@ const addReview = (ev) => {
 document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', addReview);
     btn.addEventListener('click', addReviewBlock);
-    // menu_btn.addEventListener('click', openMenu);
 });
 
 
@@ -28,7 +28,7 @@ let account_age = document.getElementById('account_age');
 let account_gender = document.getElementById('account_gender');
 let review_text = document.getElementById('review_text');
 
-
+// Adding review block using info from input form
 
 const addReviewBlock = (ev) => {
     review_done.style.display = 'flex';
@@ -52,24 +52,82 @@ const addReviewBlock = (ev) => {
     account_age.innerHTML = age;
     account_gender.innerHTML = gender;
     review_text.innerHTML = textarea;
-
-
-    
-
 }
 
 
-// let burger_menu = document.getElementById('burger_menu');
-// burger_menu.style.display = 'none';
-
-// let menu_btn = document.getElementById('menu_btn');
-
-// const openMenu = (ev) => {
-//     burger_menu.style.display = 'flex';
 
 
-    
+// Hamburger menu
 
-// }
+let burger_menu = document.getElementById('burger_menu');
+let open_menu_btn = document.getElementById('menu_btn');
+
+const openMenu = (ev) => {
+    burger_menu.style.display = 'flex';
+}
+
+const closeMenu = (ev) => {
+    burger_menu.style.display = 'none';
+
+}
+
+let block_adapt_none = document.getElementById('adapt_none');
+let close_menu_btn = document.getElementById('close_menu');
+let product_none = document.getElementById('product_none');
+
+// Checking is it mobile or pc
+const isMobile = {
+    Android: function () {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function () {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function () {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function () {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function () {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function () {
+        return (
+                isMobile.Android()|| 
+                isMobile.BlackBerry()|| 
+                isMobile.iOS()|| 
+                isMobile.Opera()|| 
+                isMobile.Windows()
+                );
+    }
+};
+
+// If it's mobile than open/close hamburger menu
+
+if(isMobile.any()){
+    open_menu_btn.style.visibility = "visible";
+    block_adapt_none.style.display = 'none';
+    product_none.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', () => {
+        open_menu_btn.addEventListener('click', openMenu);
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        close_menu_btn.addEventListener('click', closeMenu);
+    });
+}
+else{
+    burger_menu.style.display = 'none';
+}
 
 
+
+
+
+
+window.addEventListener('mouseup', function(event){
+    if (event.target != burger_menu && event.target.parentNode != burger_menu){
+        burger_menu.style.display = 'none';
+    }
+});

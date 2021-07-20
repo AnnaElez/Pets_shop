@@ -21,11 +21,36 @@ body{
     margin: 0 auto;
 }
 
+/* Buttons */
+
 button{
     background-color: rgba(255, 255, 255, 0);
     border: none;
 }
 
+.button{
+    padding: 12px;
+    font-size: 16px;
+}
+
+.orange_button{
+    background-color: #E27B3A;
+    margin-right: 20px;
+}
+
+.white_button{
+    border: 1px solid #E27B3A;
+}
+
+.orange_button:hover{
+    background: rgba(255, 166, 0, 0.644);
+}
+
+.white_button:hover{
+    background: rgba(253, 217, 149, 0.418);
+}
+
+/* Text styles */
 .uppercase_text{
     text-transform: uppercase;
 }
@@ -80,14 +105,6 @@ button{
     margin-bottom: 8rem;
 }
 
-.orange_button:hover{
-    background: rgba(255, 166, 0, 0.644);
-}
-
-.white_button:hover{
-    background: rgba(253, 217, 149, 0.418);
-}
-
 
 
 
@@ -139,11 +156,48 @@ button{
 
 .burger_menu{
     background-color: black;
-    width: 70vw;
-    height: 100vw;
+    width: 40vw;
+    z-index: 5;
+    position:absolute;
+    height: 100vh;
+    top:0;
+    right:0;
+    display: none;
 }
 
+#menu_btn{
+    visibility: hidden;
+}
 
+.close_menu{
+    position:absolute;
+    top:0;
+    right:0;
+    z-index: 6;
+    margin: 1rem 3rem;
+}
+
+.close_menu i{
+    color: white;
+}
+
+.menu_adapt{
+    z-index:3 ;
+    width: 100%;
+}
+.menu_list-item_hamb a{
+    color: white;
+    font-size: 20px;
+}
+
+.menu_list-item_hamb {
+    padding: 20px;
+    border-bottom: 2px solid white;
+}
+.menu_list_hamb{
+    flex-direction: column;
+
+}
 
 
 /* Main */
@@ -154,6 +208,10 @@ button{
 
 .site_welcome{
     margin-bottom: 10rem;
+}
+
+.site_welcome>div{
+    flex: 1;
 }
 
 .site_welcome_texts{
@@ -177,9 +235,12 @@ button{
     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+.cards>div{
+    flex: 1;
+}
+
 .card{
     border: 1px solid grey;
-    width: 18rem;
     padding: 2.5rem 1.5rem;
     flex-direction: column;
     z-index: 1;
@@ -232,11 +293,11 @@ button{
 }
 
 .big_img_wrapper{
-    height: 24rem;
+    height: 20rem;
 }
 
 .little_img_wrapper{
-    height: 15rem;
+    height: 11rem;
 }
 
 .product_description{
@@ -246,6 +307,9 @@ button{
 
 .img_and_info{
     gap: 6.2rem;
+}
+.img_and_info>div{
+    flex:1;
 }
 
 .img_and_info img{
@@ -264,16 +328,7 @@ button{
     opacity: 0.8;
 }
 
-.orange_button{
-    background-color: #E27B3A;
-    padding: 12px;
-    margin-right: 20px;
-}
 
-.white_button{
-    border: 1px solid #E27B3A;
-    padding: 12px;
-}
 
 .dog_card img{
     margin-bottom: 2.5rem;
@@ -289,6 +344,7 @@ button{
 
 .dog_card{
     margin-bottom: 3rem;
+    flex-direction: column;
 }
 
 .dog_card{
@@ -316,6 +372,9 @@ button{
 .gallery>div{
     padding: 25px 40px;
     flex:1 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .red_background{
@@ -401,7 +460,7 @@ button{
 
 .send_message{
     transform: skew(0,2deg);
-    gap: 6.8rem;
+    gap: 4rem;
 }
 
 .send_message>div{

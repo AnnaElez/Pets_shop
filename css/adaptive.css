@@ -1,0 +1,194 @@
+
+
+@media (max-width: 1024px){
+
+    .container{
+        max-width: 770px;
+    }
+
+    .button{
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .logo{
+        width: 25px;
+    }
+
+    .logo p{
+        font-size: 13px;
+    }
+
+    .dog_ph{
+        width: 50%;
+    }
+
+    .dog_ph img{
+        width: 100%;
+    }
+
+    .quadrangle_background{
+        height: 60vh; 
+    }
+
+
+    .site_title{
+        font-size: 4rem;
+        margin-bottom: 15px;
+    }
+
+        
+    .cards{
+        flex-wrap: wrap;
+        gap: 1.5rem;
+    }
+
+    .cards>div{
+        flex: 1;
+    }
+
+    .card{
+        padding: 2rem 1rem;
+    }
+
+    .card h2{
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    .card p{
+        font-size: 0.9rem;
+    }
+
+    .card p{
+        margin-bottom: 0.8rem;
+    }
+
+    .object_line{
+        gap: 1rem;
+    }
+
+    .img_wrapper{
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .img_and_info{
+        gap: 3rem;
+    }
+
+    .adopt_img{
+        width: 50%;
+    }
+
+    .adopt_img img{
+        width: 100%;
+    }
+
+    .adopt_info h3{
+        letter-spacing: 5px;
+        margin-bottom: 1rem;
+    }
+    .title_font{
+        font-size: 1.5rem;
+    }
+
+    .mb-8{
+        margin-bottom: 5rem;
+    }
+
+    .adopt_info p{
+        line-height: 1.5rem;
+        margin-bottom: 2rem;
+        opacity: 0.8;
+    }
+
+    .buttons{
+        margin-top: 0;
+    }
+
+    .dog_card-img img{
+        width:100% ;
+    }
+    .dog_description h3{
+        margin-bottom: 1rem;
+    }
+
+    .dog_description p{
+        font-size: 14px;
+    }
+
+
+    .gallery>div{
+        padding: 1rem 2rem;
+    }
+
+    .send_message_left_block h2{
+        font-size: 1.5rem;
+    }
+
+    .send_message_left_block p{
+        font-size: 0.8rem;
+    }
+
+    .send_message_left_block{
+        margin: 5rem 0 5rem 3rem;
+    }
+
+    .send_message_right_block{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .send_mes_input{
+        padding: 1rem 5rem 1rem 2.3rem;
+
+    }
+
+    .input_but{
+        padding: 0.5rem 1.5rem;
+        border-radius: 5px;
+        margin-top: 1rem;
+    }
+
+    /* Footer */
+
+    .footer{
+        height: 10rem;
+        margin-top: 12rem;
+        padding-top: 3rem;
+    }
+
+    .triangle_footer{
+        border-bottom: 50px solid #140A03;
+        margin-bottom: -200px;
+    }
+
+    .footer_menu a{
+        margin: 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .contacts_footer_menu{
+        position: absolute;
+        flex-direction: column;
+        margin-left: 290px;
+        margin-top: -50px;
+    }
+
+    .contacts_footer_menu h2{
+        font-size: 1rem;
+        margin: 1rem 0 ;
+    }
+
+    .icons_contact{
+        gap: 0.8rem;
+    }
+
+    .footer .logo{
+        width: 2.5rem;
+    }
+
+
+}
